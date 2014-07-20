@@ -232,3 +232,31 @@ var myLibrary = library(function(){
         }
     };
 }());
+
+
+// More examples
+
+// Declaring the namespace
+var myApplication = myApplication || {};
+
+// Declaring modules usermodule
+myApplication.usermodule = (function(){
+    // createMessage: only accessible inside the module
+    var createMessage = function(message){
+        return 'Hello ' + message;
+    };
+
+    return {
+        //sayHello is a public method
+        sayHello: function(message){
+            return createMessage(message);
+        }
+    };
+})();
+
+// Declaring another module
+myApplication.adminModule = (function(){
+    // insert code
+})();
+
+myApplication.usermodule.sayHello('This is my user module.');

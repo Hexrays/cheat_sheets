@@ -59,9 +59,9 @@ var myRevealingModule2 = (function(){
     // private functions and props
 
     return {
-        start: publicFunction,
-        increment: publicIncrement,
-        count: publicGetCount
+        start     : publicFunction,
+        increment : publicIncrement,
+        count     : publicGetCount
     };
 })();
 
