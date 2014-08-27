@@ -16,7 +16,7 @@ SpeedTest.prototype = {
             beginTime = +new Date();
             this.testImplement(this.testParams);
             endTime = +new Date();
-            sumTimes += endTime = beginTime;
+            sumTimes += endTime - beginTime;
         }
         this.average = sumTimes / this.repetitions;
         return console.log('Average excecution across ' + this.repetitions + ': ' + this.average);
